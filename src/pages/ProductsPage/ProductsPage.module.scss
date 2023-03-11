@@ -1,0 +1,44 @@
+@use 'styles/style.scss' as *;
+@use 'styles/theme/fixes.scss' as *;
+
+.productsPage {
+  padding-top: 60px;
+  //padding-bottom: 200px;
+}
+
+.productsHeader {
+  margin: 0 auto;
+  padding-left: 30px;
+  max-width: 1276px;
+  width: 100%;
+  display: grid;
+  grid-template-columns: 10fr 2fr;
+  gap: 2px;
+}
+
+.title {
+  font-size: 36px;
+  line-height: 44px;
+  color: $color-midnight-blue;
+}
+.bidTitle {
+  color: $color-metallic-seaweed;
+}
+
+.button {
+  min-width: 162px;
+  height: 42px;
+  text-transform: uppercase;
+}
+
+.bidTotal {
+  padding-top: 10px;
+  font-size: 14px;
+  color: $color-santas-grey;
+}
+
+.bidsLink {
+  button[class*='active'] {
+    color: $color-metallic-seaweed;
+  }
+}

@@ -1,0 +1,7 @@
+@use 'styles/style.scss' as *;
+
+.container {
+  @include container;
+  padding-top: 60px;
+  padding-bottom: 200px;
+}

@@ -1,0 +1,30 @@
+@use 'styles/style.scss' as *;
+
+.title {
+  margin-bottom: 30px;
+  font-family: $font-Pangram;
+  font-weight: 700;
+  line-height: 19px;
+}
+
+.list {
+  padding: 0;
+  margin: 0;
+  list-style-type: none;
+
+  &.row {
+    display: flex;
+    gap: 90px;
+  }
+}
+
+.item {
+  font-size: 14px;
+  line-height: 19px;
+  margin-bottom: 12px;
+  cursor: pointer;
+
+  &:hover {
+    text-decoration: underline;
+  }
+}

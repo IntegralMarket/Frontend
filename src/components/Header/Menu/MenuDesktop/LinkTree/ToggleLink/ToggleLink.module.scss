@@ -1,0 +1,40 @@
+@use 'styles/style.scss' as *;
+
+.toggleLink {
+  margin-bottom: 15px;
+}
+
+.biggerShift {
+  margin-bottom: 15px;
+}
+
+.text {
+  font-size: 18px;
+  line-height: 1.35;
+  font-weight: 400;
+  color: $color-grey-4f;
+  cursor: pointer;
+}
+
+.textArrow {
+  position: relative;
+  display: inline-block;
+  width: 6px;
+  margin-left: 6px;
+  vertical-align: middle;
+  border-color: inherit;
+
+  &::after {
+    content: '';
+    position: absolute;
+    top: 45%;
+    left: 0;
+    transform: translateY(-50%);
+    width: 0;
+    height: 0;
+    border-style: solid;
+    border-width: 4px 3px 0 3px;
+    border-color: transparent transparent transparent transparent;
+    border-top-color: $color-orange;
+  }
+}

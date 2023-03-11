@@ -1,0 +1,83 @@
+@use 'styles/style.scss' as *;
+
+.panelContainer {
+  width: 100%;
+  background-color: $color-grey-f358;
+}
+
+.panelContent {
+  display: flex;
+  column-gap: 38px;
+  @include container;
+  padding-top: 40px;
+  padding-bottom: 200px;
+}
+
+.infoBlock {
+  display: flex;
+  flex-direction: column;
+  gap: 40px;
+  max-width: 354px;
+  width: 100%;
+  color: $color-grey-09c2;
+}
+
+.title {
+  font-family: $font-Inter;
+  color: $color-midnight-blue;
+}
+
+.country {
+  display: flex;
+  align-items: center;
+}
+.countryName {
+  font-family: $font-Inter;
+  font-weight: 700;
+  font-size: 16px;
+  line-height: 18px;
+  color: $color-grey-1b;
+  padding-left: 12px;
+}
+
+.addressWrapper {
+  display: flex;
+  flex-direction: column;
+  gap: 17px;
+  font-style: normal;
+  @include regularText;
+}
+
+.address {
+  display: flex;
+  flex-direction: column;
+
+  & > span {
+    display: block;
+  }
+}
+
+.phoneList {
+  margin: 0;
+  padding: 0;
+  list-style-type: none;
+  font-style: normal;
+}
+
+.staffWrapper {
+  display: grid;
+  width: 100%;
+  grid-template-columns: repeat(2, 1fr);
+  grid-template-rows: auto;
+  gap: 12px;
+}
+
+.plugText {
+  grid-column: 1 / 3;
+  @include regularText;
+}
+
+.map {
+  max-width: 824px;
+  width: 100%;
+}

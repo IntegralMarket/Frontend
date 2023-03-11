@@ -1,0 +1,34 @@
+@use 'styles/style.scss' as *;
+
+.tabContainer {
+  height: 34px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: $color-white;
+  border-radius: 8px;
+}
+
+.tab {
+  padding: 8px 24px;
+  border: none;
+  border-radius: 8px;
+
+  @include boldText;
+  color: $color-midnight-blue;
+  background-color: $color-white;
+  cursor: pointer;
+  transition: 0.2s ease;
+  transition-property: color, background-color;
+
+  &.active {
+    background-color: $color-midnight-blue;
+    color: $color-white;
+  }
+
+  &.disabled {
+    color: $color-midnight-blue;
+    background: none;
+    pointer-events: none;
+  }
+}

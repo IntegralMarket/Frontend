@@ -1,0 +1,10 @@
+@use 'styles/style.scss' as *;
+
+.wrapper {
+  display: grid;
+  grid-template-columns: repeat(7, 1fr);
+  max-width: 1213px;
+  width: 100%;
+  border: 1px solid $color-grey-f358;
+  border-radius: 12px;
+}

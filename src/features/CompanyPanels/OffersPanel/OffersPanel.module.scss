@@ -1,0 +1,16 @@
+@use 'styles/style.scss' as *;
+
+.container {
+  @include container;
+  max-width: none;
+  padding-top: 60px;
+  padding-bottom: 200px;
+}
+
+.showMoreButton {
+  margin: 20px auto 0;
+  border: none;
+  @include regularText;
+  color: $color-midnight-blue;
+  background-color: transparent;
+}

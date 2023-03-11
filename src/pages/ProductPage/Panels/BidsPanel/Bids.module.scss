@@ -1,0 +1,99 @@
+@use 'styles/style.scss' as *;
+
+.wrapper {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  @include container;
+  padding-top: 50px;
+  padding-bottom: 200px;
+  padding-right: 0;
+}
+
+.title {
+  color: $color-midnight-blue;
+  margin-bottom: 26px;
+  font-weight: $fw-bold;
+  font-size: 16px;
+  line-height: 19px;
+  letter-spacing: 0.01em;
+}
+
+.deadline {
+  width: 100%;
+  font-size: 14px;
+  line-height: 20px;
+  letter-spacing: 0.01em;
+  margin-bottom: 42px;
+}
+
+.wrapperInputs {
+  min-width: 726px;
+
+  .inputs {
+    display: grid;
+    column-gap: 20px;
+    row-gap: 60px;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(3, 1fr);
+  }
+}
+
+.label {
+  @include boldText;
+  color: $color-midnight-blue;
+}
+.select {
+  border-radius: 8px;
+  width: 100%;
+  max-width: 353px;
+  padding: 2px 0px;
+  @include boldText;
+  border: 1px solid $color-grey-f358;
+
+  &:global(.CSS_select__placeholder) {
+    @include placeholder;
+  }
+}
+
+.input {
+  border: 1px solid #f3f5f8;
+  border-radius: 8px;
+  width: 100%;
+  max-width: 353px;
+  color: $color-midnight-blue;
+  font-weight: $fw-regular;
+  font-size: 14px;
+  line-height: 17px;
+  letter-spacing: 0.01em;
+
+  &::placeholder {
+    @include placeholder;
+  }
+
+  &.hidden {
+    display: none;
+  }
+}
+.inputLabel {
+  // max-height: 77px;
+  //remove cross in inputs
+  div[class*='indicatorContainer']:first-child {
+    display: none;
+  }
+}
+.calendar {
+  padding: 15px 10px;
+  display: flex;
+  align-items: center;
+  gap: 11px;
+  color: $color-midnight-blue;
+  font-weight: $fw-medium;
+}
+
+.labelQuantity {
+  margin-top: 15px;
+  font-size: 10px;
+  line-height: 12px;
+  letter-spacing: 0.01em;
+}

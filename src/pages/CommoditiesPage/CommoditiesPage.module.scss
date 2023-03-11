@@ -1,0 +1,48 @@
+@use 'styles/style.scss' as *;
+
+.container {
+  @include container;
+  padding-top: 80px;
+}
+
+.title {
+  margin-bottom: 80px;
+  color: $color-midnight-blue;
+  white-space: pre-wrap;
+}
+
+.panelWrapper {
+  @include container;
+  padding-top: 40px;
+
+}
+
+
+
+.categoriesList {
+  margin-bottom: 40px;
+
+  &:last-child {
+    margin-bottom: 200px;
+  }
+}
+
+.plugText {
+  margin-bottom: 200px;
+  @include regularText;
+  color: $color-grey-1b;
+  text-align: center;
+}
+
+.showMoreButton {
+  margin: 0 auto;
+  padding-bottom: 200px;
+  border: none;
+  @include regularText;
+  color: $color-midnight-blue;
+  background-color: transparent;
+}
+
+.searchButton {
+  cursor: pointer;
+}

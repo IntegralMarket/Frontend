@@ -1,0 +1,25 @@
+@use 'styles/style.scss' as *;
+
+.defaultLink {
+  margin-bottom: 12px;
+}
+
+.defaultLinkBigger {
+  margin-bottom: 15px;
+}
+
+.text {
+  font-size: 14px;
+  line-height: 1.35;
+  font-weight: 500;
+  color: $color-grey-4f;
+}
+
+.textBigger {
+  font-size: 18px;
+  font-weight: 400;
+}
+
+.textActive {
+  opacity: 0.7;
+}

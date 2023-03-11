@@ -1,0 +1,64 @@
+@use 'styles/style.scss' as *;
+
+.table {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  @include regularText;
+}
+
+.header {
+  display: flex;
+  width: 100%;
+  padding-bottom: 20px;
+  border-bottom: 1px solid $color-midnight-blue;
+
+  &.grey {
+    border-color: $color-grey-f358;
+  }
+
+  .cell {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    font-weight: $fw-bold;
+    color: $color-midnight-blue;
+
+    &.grey {
+      font-weight: $fw-regular;
+      color: $color-santas-grey;
+    }
+  }
+}
+
+.column {
+  display: flex;
+  flex-direction: column;
+  flex-basis: 100%;
+  padding: 0 4px;
+  height: 100%;
+}
+
+.row {
+  display: flex;
+  align-items: center;
+  width: 100%;
+
+  .cell {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    width: 100%;
+    min-height: 70px;
+    color: $color-grey-1b;
+    border-bottom: 1px solid rgba($color-midnight-blue, 0.1);
+
+    &.grey {
+      border-color: $color-grey-f358;
+    }
+  }
+}

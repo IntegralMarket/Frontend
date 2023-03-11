@@ -1,0 +1,77 @@
+@use 'styles/style.scss' as *;
+
+.point {
+  position: relative;
+  width: 10px;
+  height: 10px;
+  border: 1px solid $color-white;
+  border-radius: 10px;
+  cursor: pointer;
+
+  &.blue {
+    background-color: $color-midnight-blue;
+    &::before {
+      background-color: $color-midnight-blue;
+    }
+  }
+
+  &.green {
+    background-color: $color-metallic-seaweed;
+    &::before {
+      background-color: $color-metallic-seaweed;
+    }
+  }
+
+  &.active {
+    background-color: $color-butterfly-blue;
+    &::before {
+      background-color: $color-butterfly-blue;
+    }
+  }
+
+  &::before {
+    content: '';
+    position: absolute;
+    z-index: 0;
+    width: 14px;
+    height: 14px;
+    background-repeat: no-repeat;
+    left: calc(50% - 7px);
+    bottom: 14px;
+    transform: rotate(45deg);
+  }
+}
+
+.tooltip {
+  position: absolute;
+  z-index: 1;
+  top: -23px;
+  left: 4px;
+  transform: translate(-50%, -50%);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: fit-content;
+  padding: 4px 12px;
+  min-height: 26px;
+  border-radius: 4px !important;
+  cursor: pointer;
+
+  &.blue {
+    background-color: $color-midnight-blue;
+  }
+
+  &.green {
+    background-color: $color-metallic-seaweed;
+  }
+
+  &.active {
+    background-color: $color-butterfly-blue;
+  }
+}
+
+.value {
+  @include boldText;
+  line-height: 18px;
+  color: $color-white;
+}

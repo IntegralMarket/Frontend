@@ -1,0 +1,37 @@
+@use 'styles/style.scss' as *;
+
+.wrapper {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: flex-start;
+
+  & > div,
+  > input {
+    &:hover {
+      box-shadow: $shadow-standard-a10-extra;
+    }
+    &:focus-within {
+      box-shadow: $shadow-standard-a10-extra;
+    }
+  }
+}
+
+.label {
+  margin-bottom: 8px;
+  font-size: 14px;
+  line-height: 17px;
+  color: $color-midnight-blue;
+}
+
+.error {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+  margin-top: 5px;
+  & span {
+    color: $color-red;
+    font-size: 14px;
+    font-weight: $fw-regular;
+  }
+}

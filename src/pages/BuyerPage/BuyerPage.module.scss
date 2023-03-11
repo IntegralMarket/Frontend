@@ -1,0 +1,21 @@
+@use 'styles/style.scss' as *;
+
+.container {
+  @include container;
+
+  padding-top: 60px;
+  margin-bottom: 60px;
+}
+.bidsContainer {
+  @include container;
+  max-width: none;
+  padding: 60px 0 200px 0;
+}
+.bidsLink {
+  button[class*='active'] {
+    color: $color-metallic-seaweed;
+  }
+}
+.wrapper {
+  margin-top: 50px;
+}

@@ -1,0 +1,26 @@
+@use 'styles/style.scss' as *;
+
+.panelContainer {
+  width: 100%;
+  background-color: $color-grey-f358;
+}
+
+.panelContent {
+  @include container;
+  padding-top: 45px;
+  padding-bottom: 200px;
+}
+
+.showMoreButton {
+  margin: 20px auto 0;
+  border: none;
+  @include regularText;
+  color: $color-midnight-blue;
+  background-color: transparent;
+}
+
+.plugText {
+  @include regularText;
+  color: $color-grey-1b;
+  text-align: center;
+}

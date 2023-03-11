@@ -1,0 +1,53 @@
+@use 'styles/style.scss' as *;
+
+.wrapper {
+  min-width: 914px;
+  padding: 130px 75px;
+}
+
+.heading {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  gap: 30px;
+  margin-bottom: 12px;
+}
+
+.title {
+  font-family: $font-Inter;
+  font-size: 48px;
+  line-height: 58px;
+  font-weight: 800;
+  color: $color-midnight-blue;
+}
+
+.subtitle {
+  font-family: $font-Pangram;
+  font-size: 16px;
+  line-height: 22px;
+  color: $color-grey-1b;
+  margin-bottom: 60px;
+}
+
+.button {
+  min-width: 240px;
+  height: 37px;
+  margin-bottom: 30px;
+  border: none;
+  background-color: $color-metallic-seaweed;
+
+  &:hover {
+    background-color: lighten($color: $color-metallic-seaweed, $amount: 5);
+  }
+}
+
+.content {
+  max-width: 580px;
+  font-family: $font-Pangram;
+  font-size: 16px;
+  line-height: 22px;
+
+  .link {
+    color: $color-picton-blue;
+  }
+}

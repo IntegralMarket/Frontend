@@ -1,0 +1,128 @@
+@use 'styles/style.scss' as *;
+
+.panelContainer {
+  width: 100%;
+  background-color: $color-grey-f358;
+}
+
+.panelContent {
+  @include container;
+  padding-top: 45px;
+  padding-bottom: 200px;
+}
+
+.infoWrapper {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  column-gap: 200px;
+  padding-bottom: 35px;
+  margin-bottom: 40px;
+  border-bottom: 1px solid $color-french-grey;
+}
+
+.infoList {
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 35px;
+
+  &.wide {
+    grid-column: 1 / 3;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-auto-flow: dense;
+  }
+}
+
+.infoItem {
+  white-space: nowrap;
+  display: flex;
+  align-items: center;
+  min-width: 280px;
+  @include regularText;
+
+  .label {
+    padding: 0 4px 0 12px;
+  }
+
+  .value {
+    font-weight: $fw-bold;
+  }
+
+  &.vstItem {
+    grid-column: 1 / 1;
+  }
+}
+
+.descriptionWrapper {
+  display: flex;
+  justify-content: space-between;
+}
+
+.descriptionList {
+  max-width: 900px;
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+}
+
+.descriptionItem {
+  margin-bottom: 40px;
+
+  .title {
+    margin-bottom: 12px;
+    font-family: $font-Inter;
+    color: $color-midnight-blue;
+  }
+
+  .value {
+    @include regularText;
+    line-height: 20px;
+    color: $color-grey-09c2;
+    white-space: pre-wrap;
+  }
+}
+
+.documentTitle {
+  margin-bottom: 18px;
+  font-family: $font-Inter;
+  color: $color-midnight-blue;
+}
+
+.documentList {
+  max-width: 900px;
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+  gap: 25px 65px;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-auto-flow: dense;
+}
+
+.documentItem {
+  a {
+    display: flex;
+    align-items: center;
+    font-size: 14px;
+
+    .icon {
+      font-size: 28px;
+      color: $color-picton-blue;
+      padding-right: 10px;
+    }
+  }
+}
+
+.button {
+  width: 201px;
+  margin-top: 40px;
+  border: 1px solid $color-metallic-seaweed;
+}
+
+.button:hover {
+  color: $color-white;
+  background-color: $color-metallic-seaweed;
+}

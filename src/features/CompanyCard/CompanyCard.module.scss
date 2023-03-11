@@ -1,0 +1,50 @@
+@use 'styles/style.scss' as *;
+
+.content {
+  font-size: 14px;
+}
+
+.blockIcon {
+  display: flex;
+  align-items: center;
+  margin-bottom: 12px;
+}
+
+.icon {
+  color: $color-picton-blue;
+  margin-right: 6px;
+}
+
+.link,
+.commodities {
+  &:hover {
+    color: $color-picton-blue;
+    text-decoration: underline;
+    font-weight: 400;
+  }
+}
+
+.commodities {
+  color: $color-picton-blue;
+}
+
+.subtitle {
+  max-width: 200px;
+  margin-top: 12px;
+  margin-bottom: 18px;
+}
+
+.caption {
+  margin-bottom: 12px;
+  color: $color-santas-grey;
+}
+
+.productsList {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  margin: 0;
+  margin-bottom: 12px;
+  padding: 0;
+  list-style-type: none;
+}

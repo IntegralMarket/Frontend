@@ -1,0 +1,170 @@
+@use 'styles/style.scss' as *;
+
+.modal {
+  padding: 32px;
+  border-radius: 12px;
+  background-color: $color-white;
+  width: 940px;
+}
+
+.form {
+  width: 100%;
+}
+
+.footer {
+  display: flex;
+  justify-content: end;
+  align-items: flex-end;
+}
+
+.button {
+  padding: 12px 24px;
+  width: 156px;
+  height: 40px;
+  border-radius: 4px;
+}
+
+.subscribe {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  margin-left: 180px;
+}
+
+.header {
+  margin-bottom: 48px;
+
+  .logoExample {
+    display: block;
+    width: 163px;
+    height: 47px;
+    background: url('/images/logo-header.svg');
+    background-size: cover;
+    cursor: pointer;
+  }
+}
+
+.titles {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  color: $color-midnight-blue;
+  font-weight: 800;
+  margin-bottom: 48px;
+
+  .signUp {
+    width: 50%;
+  }
+
+  .signIn {
+    width: 50%;
+  }
+}
+
+.wrapperEmails {
+  display: flex;
+  position: relative;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 48px;
+  gap: 20px;
+
+  .businessWrapper {
+    width: 50%;
+  }
+
+  .emailWrapper {
+    width: 50%;
+  }
+}
+
+.businessLabel::after {
+  content: '*';
+  color: $color-red;
+  margin-left: 2px;
+}
+
+.contacts {
+  position: absolute;
+  top: 105%;
+  left: 0;
+  display: flex;
+  gap: 10px;
+}
+
+.icon {
+  color: $color-grey-da;
+  cursor: pointer;
+  transition: color 0.2s ease;
+
+  &:hover,
+  &.active {
+    &.iconEmail {
+      color: $color-butterfly-blue;
+    }
+
+    &.iconPhone {
+      color: $color-pastel-green;
+    }
+
+    &.iconTelegram {
+      color: $color-telegram;
+    }
+
+    &.iconWhatsapp {
+      color: $color-whatsapp;
+    }
+  }
+}
+
+.assents {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 48px;
+  gap: 20px;
+}
+
+.text {
+  width: 50%;
+  font-weight: $fw-regular;
+  font-size: 12px;
+  line-height: 14px;
+  letter-spacing: 0.01em;
+}
+
+.firstDescription {
+  width: 280px;
+  margin-bottom: 12px;
+}
+
+.secondDescription {
+  width: 340px;
+}
+
+.password {
+  width: 50%;
+}
+
+.label {
+  font-weight: $fw-regular;
+  color: $color-santas-grey;
+}
+
+.input {
+  border: 1px solid $color-grey-f358;
+  width: 100%;
+  @include boldText;
+  color: $color-midnight-blue;
+
+  &::placeholder {
+    @include placeholder;
+  }
+
+  &.hidden {
+    display: none;
+  }
+}
+
+.error {
+  border: 1px solid $color-red;
+}

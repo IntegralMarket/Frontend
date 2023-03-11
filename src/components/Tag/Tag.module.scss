@@ -1,0 +1,19 @@
+@use 'styles/style.scss' as *;
+
+.tag {
+  display: inline-flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 12px;
+  padding: 6px 10px;
+  border-radius: 6px;
+
+  @include regularText;
+  background: $color-grey-f358;
+  cursor: pointer;
+
+  &.active {
+    color: $color-white;
+    background: $color-metallic-seaweed;
+  }
+}

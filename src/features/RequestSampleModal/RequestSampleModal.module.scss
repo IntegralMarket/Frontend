@@ -1,0 +1,105 @@
+@use 'styles/style.scss' as *;
+
+.form {
+  width: 100%;
+  width: 954px;
+  font-family: $font-Pangram;
+  font-size: 14px;
+  line-height: 17px;
+  font-weight: $fw-bold;
+  color: $color-midnight-blue;
+}
+
+.title {
+  margin-bottom: 48px;
+  font-size: 20px;
+  line-height: 24px;
+  font-weight: $fw-bold;
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 24px 20px;
+  margin-bottom: 30px;
+}
+
+.label {
+  font-weight: $fw-regular;
+  color: $color-santas-grey;
+}
+
+.input {
+  border: 1px solid $color-grey-f358;
+  border-radius: 8px;
+  font-weight: $fw-medium;
+  font-family: $font-Pangram;
+  font-size: 14px;
+  color: $color-midnight-blue;
+  svg {
+    fill: $color-midnight-blue;
+    width: 17px;
+    height: 17px;
+  }
+  &::placeholder {
+    @include placeholder;
+  }
+  &:disabled {
+    background-color: $color-white !important;
+  }
+}
+
+.infoButtonBlock {
+  display: flex;
+  align-items: center;
+  margin-bottom: 24px;
+}
+
+.infoButton {
+  width: 28px;
+  height: 28px;
+  margin-right: 12px;
+  border: none;
+  border-radius: 8px;
+  background-color: $color-grey-f358;
+  color: $color-midnight-blue;
+  font-size: 24px;
+  font-weight: $fw-regular;
+
+  &:hover {
+    background-color: $color-grey-f358;
+    color: $color-midnight-blue;
+  }
+}
+
+.buttonBlock {
+  display: flex;
+  align-items: flex-end;
+}
+
+.companyInfo {
+  color: $color-black;
+  font-weight: $fw-regular;
+  margin-bottom: 4px;
+}
+
+.button {
+  padding: 12px 24px;
+  margin-right: 12px;
+  border: 1px solid $color-metallic-seaweed;
+  border-radius: 4px;
+  width: 87px;
+  background-color: $color-metallic-seaweed;
+  font-weight: $fw-bold;
+
+  &:hover {
+    border: 1px solid $color-metallic-seaweed;
+    color: $color-metallic-seaweed;
+    background-color: $color-white;
+  }
+}
+
+.logo {
+  display: flex;
+  margin: 0 8px 4px 8px;
+}

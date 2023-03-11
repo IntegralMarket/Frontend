@@ -1,0 +1,44 @@
+@use 'styles/style.scss' as *;
+
+.panelContainer {
+  width: 100%;
+  background-color: $color-grey-f358;
+}
+.panelContent {
+  display: flex;
+  column-gap: 38px;
+  @include container;
+  padding-top: 40px;
+  padding-bottom: 180px;
+}
+.table {
+  width: 100%;
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+}
+.row {
+  min-height: 80px;
+  padding-top: 40px;
+  padding-bottom: 20px;
+  border-top: 1px solid rgba(0, 35, 102, 0.1);
+
+  @include regularText;
+  color: $color-grey-1b;
+
+  &:first-child {
+    min-height: 55px;
+    padding-top: 15px;
+    border: none;
+  }
+}
+
+.commodities {
+  margin-bottom: 22px;
+  &:first-child {
+    margin-top: 22px;
+  }
+  &:last-child {
+    margin-bottom: 0;
+  }
+}

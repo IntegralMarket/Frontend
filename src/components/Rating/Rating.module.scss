@@ -1,0 +1,18 @@
+@use 'styles/style.scss' as *;
+
+.wrapper {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 7px;
+
+  &.reverse {
+    flex-direction: row-reverse;
+  }
+}
+
+.number {
+  @include regularText;
+  line-height: 16px;
+  color: $color-midnight-blue;
+}

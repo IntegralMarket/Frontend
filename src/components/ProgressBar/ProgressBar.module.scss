@@ -1,0 +1,17 @@
+@use 'styles/style.scss' as *;
+
+.container {
+  display: flex;
+  justify-content: flex-start;
+  height: 10px;
+  width: 100%;
+  max-width: 250px;
+  border-radius: 4px;
+  background-color: $color-french-grey-a30;
+}
+
+.inner {
+  height: 100%;
+  border-radius: 4px;
+  background-color: $color-midnight-blue;
+}

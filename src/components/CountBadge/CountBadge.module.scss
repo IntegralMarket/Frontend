@@ -1,0 +1,25 @@
+@use 'styles/style.scss' as *;
+
+.block {
+  position: relative;
+}
+
+.container {
+  position: absolute;
+  right: 0;
+  top: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 17px;
+  height: 17px;
+  border-radius: 50%;
+  background-color: $color-red;
+  transform: translate(50%, -50%);
+}
+
+.count {
+  color: $color-white;
+  font-weight: $fw-medium;
+  font-size: 12px;
+}

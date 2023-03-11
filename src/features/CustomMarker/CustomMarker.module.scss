@@ -1,0 +1,59 @@
+@use 'styles/style.scss' as *;
+
+.point {
+  position: relative;
+  width: 4px;
+  height: 4px;
+  cursor: pointer;
+}
+
+.marker {
+  position: absolute;
+  top: 2px;
+  left: 2px;
+  transform: translate(-50%, -85%);
+
+  & svg {
+    overflow: visible;
+  }
+
+  &.active svg {
+    animation: bounce 1s ease;
+  }
+}
+
+@keyframes bounce {
+  10% {
+    transform: translateY(0%);
+  }
+  20% {
+    transform: translateY(-15%);
+  }
+  35% {
+    transform: translateY(0%);
+  }
+  45% {
+    transform: translateY(-7%);
+  }
+  50% {
+    transform: translateY(0%);
+  }
+  55% {
+    transform: translateY(-5%);
+  }
+  60% {
+    transform: translateY(0);
+  }
+  65% {
+    transform: translateY(-3%);
+  }
+  70% {
+    transform: translateY(0);
+  }
+  75% {
+    transform: translateY(-2%);
+  }
+  80% {
+    transform: translateY(0);
+  }
+}

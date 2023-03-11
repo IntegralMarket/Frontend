@@ -1,0 +1,188 @@
+@use 'styles/style.scss' as *;
+
+.nameLabel {
+  display: inline-block;
+  margin-bottom: 4px;
+  font-family: $font-Pangram;
+  font-weight: $fw-regular;
+  font-size: 14px;
+  line-height: 17px;
+  letter-spacing: 0.01em;
+  color: $color-santas-grey;
+}
+.fieldsContainer {
+  width: 556px;
+  padding-top: 25px;
+  display: flex;
+  justify-content: left;
+  align-items: center;
+  flex-wrap: wrap;
+  & > div {
+    margin-left: 10px;
+  }
+  & :not(:nth-child(2n)) {
+    margin-left: 0;
+  }
+}
+.fieldsContainer:nth-child(2n) {
+  margin-left: 10px;
+  background-color: red;
+}
+.inputLabel {
+  margin-bottom: 10px;
+}
+.nameWrapper {
+  padding-top: 25px;
+  padding-bottom: 25px;
+  border-bottom: 1px solid $color-grey-f358;
+}
+
+.name {
+  width: 268px;
+  height: 52px;
+  padding: 18px 16px;
+  font-family: $font-Pangram;
+  font-weight: $fw-medium;
+  font-size: 14px;
+  line-height: 17px;
+  letter-spacing: 0.01em;
+  color: $color-midnight-blue;
+  border: 1px solid $color-grey-f358;
+  border-radius: 8px;
+}
+
+.title {
+  font-family: $font-Inter;
+  font-weight: $fw-bold;
+  font-size: 20px;
+  line-height: 24px;
+  color: $color-midnight-blue;
+}
+
+.withLabel {
+  width: 170px;
+  margin-bottom: 25px;
+  display: flex;
+  align-items: center;
+  font-family: $font-Pangram;
+  font-weight: $fw-regular;
+  font-size: 14px;
+  line-height: 17px;
+  letter-spacing: 0.01em;
+  color: $color-midnight-blue;
+  cursor: pointer;
+}
+
+.label {
+  display: inline-block;
+  margin-bottom: 5px;
+  font-family: $font-Pangram;
+  font-weight: $fw-regular;
+  font-size: 14px;
+  line-height: 17px;
+  letter-spacing: 0.01em;
+  color: $color-santas-grey;
+}
+.input {
+  width: 268px;
+  height: 52px;
+  padding: 18px 16px;
+  margin-bottom: 5px;
+  font-family: $font-Pangram;
+  font-weight: $fw-medium;
+  font-size: 14px;
+  line-height: 17px;
+  letter-spacing: 0.01em;
+  color: $color-midnight-blue;
+  border-color: $color-grey-f358;
+}
+
+.input::placeholder {
+  font-weight: $fw-regular;
+  font-size: 14px;
+  line-height: 17px;
+  letter-spacing: 0.01em;
+  color: $color-french-grey;
+}
+.addBtn {
+  width: 28px;
+  height: 28px;
+  margin-left: 10px;
+  margin-top: 0;
+  background: $color-grey-f358;
+  border-radius: 8px;
+  border: none;
+  cursor: pointer;
+
+  &:hover {
+    border: none;
+    background: $color-grey-c;
+  }
+  &:active {
+    background: $color-grey-c;
+  }
+}
+
+.sendWrapper {
+  display: flex;
+  align-items: flex-end;
+}
+.sendBtn {
+  padding: 12px 24px;
+  width: 87px;
+  height: 41px;
+  background: $color-metallic-seaweed;
+  border-radius: 4px;
+  border: none;
+  text-transform: uppercase;
+
+  &:hover {
+    color: $color-metallic-seaweed;
+    border: 1px solid $color-metallic-seaweed;
+    background: transparent;
+  }
+}
+.traderWrapper {
+  display: flex;
+  margin-left: 12px;
+  align-items: center;
+}
+.companyLogo {
+  width: 22px;
+  height: 22px;
+  display: inline-block;
+  position: relative;
+}
+.traderName {
+  display: inline-block;
+  font-weight: $fw-regular;
+  font-size: 14px;
+  line-height: 17px;
+  letter-spacing: 0.01em;
+  color: $color-grey-1b;
+}
+.logoWrapper {
+  margin: 0 8px;
+}
+
+.addBtn {
+  width: 28px;
+  height: 28px;
+  background: $color-grey-f358;
+  border-radius: 8px;
+  border: none;
+  cursor: pointer;
+  margin-left: 0;
+  margin-right: 10px;
+  &:hover {
+    border: 1px solid $color-picton-blue;
+    background: $color-grey-f358;
+  }
+}
+
+.shortenAddBtn {
+  margin-left: 18px;
+}
+.documents {
+  margin-bottom: 9px;
+}

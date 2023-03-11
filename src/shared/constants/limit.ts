@@ -1,0 +1,1 @@
+export const DOCUMENT_INPUT_LIMIT = 10

@@ -1,0 +1,2 @@
+export const PRICE_VALIDITY_PERIOD = 14
+export const PRICE_VALIDITY_PERIOD_CRITICAL = 3

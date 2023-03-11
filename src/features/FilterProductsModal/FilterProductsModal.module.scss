@@ -1,0 +1,163 @@
+@use 'styles/style.scss' as *;
+
+.wrapper {
+  max-width: 900px;
+  max-height: 560px;
+}
+
+.content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.title {
+  font-size: 18px;
+  line-height: 22px;
+  text-transform: uppercase;
+  font-weight: $fw-bold;
+  margin-top: 5px;
+  margin-bottom: 27px;
+  color: $color-midnight-blue;
+}
+
+.switchTabs {
+  margin-bottom: 48px;
+  background-color: $color-grey-e57f0;
+  button {
+    min-width: 147px;
+  }
+}
+
+.dropdownWrapper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  div[class*='_dropdown__'] {
+    margin-right: 42px;
+  }
+  div[class*='Dropdown_headerContent_']::before {
+    top: 7px;
+  }
+  div[class*='Dropdown_content_'] {
+    top: 50%;
+  }
+}
+
+.dropDown {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-bottom: 40px;
+
+  & span:last-child {
+    max-width: 250px;
+    @include regularText;
+    color: $color-picton-blue;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+  }
+}
+
+.checkboxGroup {
+  gap: 12px;
+}
+
+.fieldsTable {
+  display: grid;
+  grid-template-columns: 0.9fr 0.9fr 1fr;
+  gap: 10px 0;
+  margin-bottom: 20px;
+  label {
+    color: $color-santas-grey;
+  }
+}
+
+.label {
+  padding: 8px 0;
+}
+
+.select {
+  border-radius: 8px;
+  max-width: 268px;
+  min-height: 52px;
+
+  :global(.CSS_select__control) {
+    &:hover {
+      box-shadow: $shadow-standard-a10;
+    }
+    &:focus-within {
+      box-shadow: $shadow-picton-blue, $shadow-standard-a10;
+    }
+  }
+
+  :global(.CSS_select__placeholder) {
+    @include placeholder;
+  }
+}
+
+.inputRange > div {
+  height: 50px;
+  border: 1px solid #f3f5f8;
+  &:hover {
+    box-shadow: $shadow-standard-a10;
+  }
+  &:focus-within {
+    box-shadow: $shadow-picton-blue, $shadow-standard-a10;
+  }
+  & input {
+    font-size: 14px;
+    color: $color-midnight-blue;
+  }
+  & input::placeholder {
+    @include placeholder;
+  }
+}
+
+.input {
+  max-width: 318px;
+  width: 100%;
+  height: 50px;
+  padding: 6px;
+  border: 1px solid #f3f5f8;
+  border-radius: 8px;
+  font-size: 14px;
+  color: $color-midnight-blue;
+
+  &::placeholder {
+    @include placeholder;
+  }
+  &:hover {
+    box-shadow: $shadow-standard-a10;
+  }
+}
+
+.button {
+  width: 94px;
+  height: 41px;
+  padding: 12px 24px;
+  margin-bottom: 32px;
+  font-size: 14px;
+  border-radius: 4px;
+  text-transform: uppercase;
+  &:hover {
+    background-color: none;
+  }
+}
+
+.filtersButton {
+  width: fit-content;
+  align-self: flex-end;
+  margin-bottom: 1em;
+  padding: 8px 14px;
+  color: $color-midnight-blue;
+  cursor: pointer;
+
+  .text {
+    padding-left: 10px;
+    @include regularText;
+    line-height: 24px;
+    color: $color-grey-1b;
+  }
+}

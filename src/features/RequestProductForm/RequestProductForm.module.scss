@@ -1,0 +1,203 @@
+@use 'styles/style.scss' as *;
+
+.form {
+  width: 100%;
+  font-family: $font-Pangram;
+  font-size: 14px;
+  font-weight: $fw-bold;
+  color: $color-midnight-blue;
+}
+
+.title {
+  margin-bottom: 48px;
+  font-size: 20px;
+  line-height: 24px;
+  font-weight: $fw-bold;
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: repeat(3fr);
+  margin-bottom: 24px;
+  gap: 18px 0;
+}
+
+.flex {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+
+.label {
+  font-weight: $fw-regular;
+  color: $color-santas-grey;
+}
+
+.select {
+  min-width: 268px;
+  border-radius: 8px;
+  border: 1px solid $color-grey-f358;
+  font-weight: $fw-medium; // TODO use mixin
+  svg {
+    fill: $color-midnight-blue;
+    width: 17px;
+    height: 17px;
+  }
+  &:global(.CSS_select__placeholder) {
+    @include placeholder;
+  }
+  div[class*='-indicatorContainer']:first-child {
+    display: none;
+  }
+  div[class*='Select_singleValue'] {
+    font-weight: $fw-medium;
+  }
+  div[class*='Select_multiValue'] {
+    font-weight: $fw-medium;
+  }
+}
+
+.inputRange > div {
+  width: 268px;
+  border: 1px solid $color-grey-f358;
+
+  & input::placeholder {
+    @include placeholder;
+  }
+  & input {
+    font-weight: $fw-medium;
+    font-size: 14px;
+  }
+  div {
+    transform: rotate(90deg);
+  }
+}
+
+.input {
+  border: 1px solid #f3f5f8;
+  border-radius: 8px;
+  width: 268px;
+  color: $color-midnight-blue;
+  font-size: 14px;
+  font-weight: $fw-medium;
+  font-family: $font-Pangram;
+  &::placeholder {
+    @include placeholder;
+  }
+  &.hidden {
+    display: none;
+  }
+}
+
+.calendar {
+  padding: 15px 10px;
+  display: flex;
+  align-items: center;
+  gap: 11px;
+  color: $color-midnight-blue;
+  .date {
+    font-weight: $fw-medium;
+  }
+}
+
+.footer {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  position: relative;
+}
+
+.footerGrade {
+  display: flex;
+  flex-direction: column;
+}
+
+.tradersInfo {
+  @include regularText;
+  color: $color-grey-1b;
+
+  .number {
+    color: $color-picton-blue;
+  }
+}
+
+.buttons {
+  button {
+    margin-right: 10px;
+  }
+  display: flex;
+}
+
+.infoButton {
+  width: 32px;
+  height: 28px;
+  border: 1px solid $color-grey-f358;
+  border-radius: 8px;
+  background-color: $color-grey-f358;
+  color: $color-midnight-blue;
+
+  &:hover {
+    border: 1px solid $color-picton-blue;
+    background-color: $color-grey-f358;
+  }
+}
+
+.button {
+  max-width: 87px;
+  max-height: 41px;
+  padding: 12px 24px;
+  margin-right: 12px;
+  margin-bottom: 8px;
+  font-size: 14px;
+  border-radius: 4px;
+  text-transform: uppercase;
+  &:hover {
+    background-color: none;
+  }
+}
+
+.addButton {
+  margin: 25px 10px 0 0;
+}
+
+.buttonBlock {
+  display: flex;
+  align-items: center;
+}
+
+.error {
+  color: $color-red;
+}
+
+.longItem {
+  width: 556px;
+}
+
+.logo {
+  display: flex;
+  margin: 0 8px;
+}
+
+.deleteBtn,
+.addBtn {
+  width: 28px;
+  height: 28px;
+  background: $color-grey-f358;
+  border-radius: 8px;
+  border: none;
+  cursor: pointer;
+  margin: 25px 0 0;
+  .icon {
+    --head: #ffffff;
+    --body: #ffffff;
+  }
+
+  &:hover {
+    background: $color-grey-f358;
+    border: 1px solid $color-picton-blue;
+    .icon {
+      --head: #002366;
+      --body: #979dac;
+    }
+  }
+}

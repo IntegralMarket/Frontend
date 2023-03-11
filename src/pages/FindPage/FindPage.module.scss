@@ -1,0 +1,207 @@
+@use '/src/styles/style.scss' as *;
+
+.formWrapper {
+  @include container;
+  padding-top: 40px;
+  padding-bottom: 160px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.themeBids {
+  color: $color-metallic-seaweed;
+}
+.themeOffers {
+  color: $color-midnight-blue;
+}
+
+.bidTabs {
+  margin-left: 24px;
+  & button {
+    width: 122px;
+    font-weight: $fw-extrabold;
+  }
+}
+.themeTabBids {
+  background-color: $color-metallic-seaweed !important;
+}
+.themeTabsBids {
+  & button {
+    color: $color-metallic-seaweed;
+  }
+}
+
+.header {
+  margin-bottom: 100px;
+  display: flex;
+  align-items: center;
+}
+
+.delivery {
+  .deliveryTitle {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    white-space: nowrap;
+
+    .description {
+      @include regularText;
+      // color: $color-santas-grey;
+    }
+
+    .countries {
+      max-width: 220px;
+      overflow: hidden;
+      white-space: nowrap;
+      text-overflow: ellipsis;
+    }
+  }
+
+  .deliveryContent {
+    left: auto;
+    right: 0;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+  }
+}
+
+.filtersWrapper {
+  display: flex;
+  justify-content: center;
+  width: 100%;
+  max-width: 800px;
+  margin-bottom: 20px;
+}
+
+.label {
+  width: 100%;
+
+  & > label {
+    padding-left: 10px;
+  }
+}
+
+.select {
+  max-width: 265px;
+  height: 60px;
+  border: none;
+  border-left: 1px solid transparent;
+  border-right: 1px solid transparent;
+
+  :global(.CSS_select__control) {
+    border-radius: 0;
+
+    &:hover {
+      box-shadow: $shadow-standard-a10;
+    }
+
+    &:focus-within {
+      box-shadow: $shadow-picton-blue, $shadow-standard-a10;
+    }
+  }
+
+  :global(.CSS_select__placeholder) {
+    @include placeholder;
+  }
+}
+
+.inputRange {
+  border-left: 1px solid transparent;
+  border-right: 1px solid transparent;
+
+  & > div {
+    height: 60px;
+    background-color: $color-white;
+    border: none;
+
+    &:hover {
+      box-shadow: $shadow-standard-a10;
+    }
+
+    &:focus-within {
+      box-shadow: $shadow-picton-blue, $shadow-standard-a10;
+    }
+
+    & input::placeholder {
+      @include placeholder;
+    }
+  }
+}
+
+.firstChild {
+  & > div:first-of-type,
+  :global(.CSS_select__control) {
+    border-radius: 10px 0 0 10px;
+  }
+}
+
+.lastChild {
+  & > div:first-of-type,
+  :global(.CSS_select__control) {
+    border-radius: 0 10px 10px 0;
+  }
+}
+
+.bottomPanel {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  max-width: 800px;
+  margin-bottom: 20px;
+}
+
+.deliveryGroup {
+  gap: 12px;
+}
+
+.submitButton {
+  height: 60px;
+  max-width: 172px;
+  width: 100%;
+  @include boldText;
+  font-size: 16px;
+  line-height: 19px;
+  border-radius: 8px;
+  text-transform: uppercase;
+}
+
+.tradeType {
+  max-width: 800px;
+  width: 100%;
+  margin-bottom: 20px;
+  font-size: 14px;
+}
+.selectedTrade {
+  font-weight: $fw-medium;
+}
+.otherTrade {
+  color: $color-santas-grey;
+}
+
+.filtersButton {
+  width: fit-content;
+  align-self: flex-end;
+  margin-bottom: 1em;
+  padding: 8px 14px;
+  color: $color-midnight-blue;
+  cursor: pointer;
+
+  .text {
+    padding-left: 10px;
+    @include regularText;
+    line-height: 24px;
+  }
+}
+
+.hidden {
+  position: absolute;
+  visibility: hidden;
+}
+
+.switchTabsClass {
+  button {
+    @include boldText16Inter;
+  }
+}

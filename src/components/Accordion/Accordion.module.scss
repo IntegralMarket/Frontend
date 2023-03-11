@@ -1,0 +1,62 @@
+@use 'styles/style.scss' as *;
+
+.accordion {
+  width: 100%;
+  max-width: 260px;
+}
+
+.headerContent {
+  position: relative;
+
+  padding-right: 35px;
+  cursor: pointer;
+
+  &:before {
+    content: '';
+    position: absolute;
+    top: 50%;
+    right: 0;
+    display: block;
+    width: 7px;
+    height: 7px;
+    border-top: 1.3px solid $color-midnight-blue;
+    border-right: 1.3px solid $color-midnight-blue;
+    transform: translateY(-50%) rotate(45deg);
+    transition: transform 0.2s ease-in-out;
+  }
+
+  &.isOpen {
+    &::before {
+      transform: rotate(135deg);
+    }
+  }
+
+  &.noArrow {
+    padding-right: 0;
+    &::before {
+      content: none;
+    }
+  }
+}
+
+.titleTop {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 10px;
+  @include regularText;
+
+  .title {
+    width: 100%;
+    color: $color-grey-1b;
+  }
+
+  .subtitle {
+    color: $color-santas-grey;
+    white-space: nowrap;
+  }
+}
+
+.content {
+  padding: 20px 0;
+  width: 100%;
+}

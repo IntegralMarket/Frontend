@@ -1,0 +1,63 @@
+@use 'styles/style.scss' as *;
+
+.wrapper {
+  display: flex;
+  justify-content: space-between;
+  @include container;
+  padding-left: 23px;
+  .searchButton {
+    width: 19px;
+    height: 19px;
+    border: none;
+    outline: none;
+    font-size: 19px;
+    color: $color-santas-grey;
+    background-color: transparent;
+    &:hover {
+      color: $color-midnight-blue;
+      background-color: transparent;
+      border: none;
+    }
+    & span > svg > path {
+      stroke: #c5c7cd;
+      transition: ease-in-out 0.2s;
+    }
+    & span:hover {
+      & svg > path {
+        stroke: #002366;
+      }
+    }
+  }
+}
+
+.breadcrumbsList {
+  display: flex;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.breadcrumbsItem {
+  display: flex;
+  align-items: center;
+  @include regularText;
+  color: $color-grey-1b;
+
+  & > * {
+    padding: 0 10px;
+  }
+
+  & > span {
+    color: $color-santas-grey;
+  }
+
+  &:not(:last-child)::after {
+    content: '';
+    display: inline-block;
+    width: 6px;
+    height: 6px;
+    border-bottom: 1px solid $color-grey-1b;
+    border-right: 1px solid $color-grey-1b;
+    transform: rotate(-45deg);
+  }
+}

@@ -1,0 +1,27 @@
+@use 'styles/style.scss' as *;
+
+.input {
+  border: 0.5px solid $color-french-grey;
+  box-sizing: border-box;
+  border-radius: 8px;
+  width: 100%;
+  height: 52px;
+  font-size: 12px;
+  padding: 12px 13px;
+  font-weight: $fw-regular;
+  color: $color-grey-2ecf;
+
+  &:focus-visible,
+  &:focus {
+    outline: none;
+  }
+
+  &:disabled {
+    color: $color-midnight-blue !important;
+    background-color: rgba(239, 239, 239, 0.3) !important;
+  }
+}
+
+.error {
+  border: 1px solid $color-red !important;
+}

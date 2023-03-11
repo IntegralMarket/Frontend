@@ -1,0 +1,201 @@
+@use 'styles/style.scss' as *;
+
+.form {
+  width: 100%;
+  max-width: 804px;
+  font-family: $font-Pangram;
+  font-size: 14px;
+  font-weight: $fw-bold;
+  color: $color-midnight-blue;
+}
+
+.title {
+  margin-bottom: 40px;
+  font-size: 24px;
+  line-height: 29px;
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 40px 20px;
+  margin-bottom: 60px;
+}
+
+.longItem {
+  grid-column: 1 / span 2;
+}
+
+.flex {
+  display: flex;
+}
+
+.label {
+  width: 100%;
+}
+
+.select {
+  max-width: none;
+  border-radius: 8px;
+
+  :global(.CSS_select__control) {
+    width: 100%;
+  }
+
+  :global(.CSS_select__placeholder) {
+    @include placeholder;
+  }
+}
+
+.inputRange > div {
+  border: 1px solid $color-grey-f358;
+
+  & input::placeholder {
+    @include placeholder;
+  }
+}
+
+.input {
+  border: 1px solid $color-grey-f358;
+  @include boldText;
+  color: $color-midnight-blue;
+
+  &::placeholder {
+    @include placeholder;
+  }
+
+  &.hidden {
+    display: none;
+  }
+}
+.calendar:hover > div,
+.input:hover,
+.select:hover {
+  border-color: $color-picton-blue;
+}
+
+.calendar > div {
+  border: 1px solid $color-grey-f358;
+  box-sizing: border-box;
+  border-radius: 8px;
+  width: 100%;
+  min-width: 392px;
+  height: 48px;
+  font-size: 12px;
+  padding: 12px 13px;
+  font-weight: $fw-regular;
+
+  &::before {
+    top: 40%;
+    right: 14px;
+    width: 6px;
+    height: 6px;
+    border-top: 2px solid $color-grey-1b;
+    border-right: 2px solid $color-grey-1b;
+    transform-origin: center;
+    transform: rotate(135deg);
+    transition: transform 0.2s ease-in-out;
+  }
+}
+
+.inputCalendar {
+  display: flex;
+  gap: 14px;
+
+  span {
+    color: $color-french-grey;
+  }
+
+  .value {
+    @include boldText;
+    color: $color-midnight-blue;
+  }
+
+  .placeholder {
+    @include placeholder;
+  }
+}
+
+.associated {
+  margin-bottom: 50px;
+}
+
+.contactsWrapper {
+  position: relative;
+}
+
+.contacts {
+  position: absolute;
+  top: -10px;
+  right: 12px;
+  display: flex;
+  gap: 10px;
+}
+
+.icon {
+  color: $color-grey-da;
+  cursor: pointer;
+  transition: color 0.2s ease;
+
+  &:hover,
+  &.active {
+    &.iconEmail {
+      color: $color-butterfly-blue;
+    }
+
+    &.iconPhone {
+      color: $color-pastel-green;
+    }
+
+    &.iconTelegram {
+      color: $color-telegram;
+    }
+
+    &.iconWhatsapp {
+      color: $color-whatsapp;
+    }
+  }
+}
+
+.footer {
+  display: flex;
+  gap: 24px;
+  align-items: center;
+  justify-content: flex-start;
+}
+
+.sendButton {
+  width: 151px;
+  height: 37px;
+}
+
+.agreementInfo {
+  @include regularText;
+  color: $color-french-grey;
+
+  .link {
+    color: $color-midnight-blue;
+    cursor: pointer;
+
+    &:hover {
+      text-decoration: underline;
+      color: $color-picton-blue;
+    }
+  }
+}
+
+.error {
+  display: flex;
+  align-items: center;
+  margin-top: 8px;
+  color: $color-red;
+}
+
+.errorInput {
+  border: 1px solid $color-red;
+  border-radius: 8px;
+}
+
+.errorIcon {
+  margin-right: 4px;
+}

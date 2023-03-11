@@ -1,0 +1,73 @@
+@use 'styles/style.scss' as *;
+
+.modal {
+  width: 400px;
+  height: 286px;
+  padding: 24px;
+  font-family: $font-Pangram;
+  color: $color-midnight-blue;
+  font-size: 14px;
+  line-height: 17px;
+  box-shadow: 0 4px 22px 10px rgba(0, 35, 102, 0.12);
+}
+
+.close {
+  position: absolute;
+  top: 22px;
+  right: 30px;
+  width: 15px;
+  height: 15px;
+}
+
+.icon {
+  color: $color-midnight-blue;
+  cursor: pointer;
+
+  & span::before {
+    color: #002366;
+  }
+}
+
+
+.inputLabel input[type=file] {
+  position: absolute;
+  z-index: -1;
+  opacity: 0;
+  display: block;
+  width: 0;
+  height: 0;
+}
+
+.inputLabel {
+  position: relative;
+  display: inline-block;
+  color: $color-santas-grey;
+  background-color: $color-grey-f358;
+  border: 1px dashed $color-french-grey;
+  text-align: center;
+  width: 352px;
+  padding: 24px 0;
+  cursor: pointer;
+  border-radius: 8px;
+
+  & p {
+    width: 100%;
+    margin-top: 14px;
+    border-top: 1px dashed $color-french-grey;
+    padding-top: 12px;
+    margin-bottom: 12px;
+  }
+}
+
+.title {
+  font-weight: $fw-bold;
+  font-size: 14px;
+  line-height: 17px;
+  letter-spacing: 0.16px;
+  margin-right: auto;
+  margin-bottom: 40px;
+}
+
+.browse {
+  color: $color-picton-blue
+}

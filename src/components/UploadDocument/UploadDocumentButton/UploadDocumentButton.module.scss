@@ -1,0 +1,32 @@
+@use 'styles/style.scss' as *;
+
+.button {
+  width: 52px;
+  height: 28px;
+  background: $color-grey-f358;
+  border-radius: 8px;
+  border: none;
+  cursor: pointer;
+  margin: 25px 0 0;
+  .icon {
+    --head: #ffffff;
+    --body: #ffffff;
+    --border: #002366;
+  }
+
+  &:hover {
+    border: 1px solid $color-picton-blue;
+    background: $color-grey-f358;
+    .icon {
+      --head: #002366;
+      --body: #979dac;
+      --border: #f3f5f8;
+    }
+  }
+}
+
+.selected {
+  display: flex;
+  align-items: end;
+  height: 48px;
+}

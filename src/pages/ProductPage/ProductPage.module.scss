@@ -1,0 +1,74 @@
+@use 'styles/style.scss' as *;
+@use 'styles/theme/fixes.scss' as *;
+
+.container {
+  padding-top: 60px;
+}
+
+.headerContent {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  @include container;
+  margin-bottom: 60px;
+}
+
+.categoryWrapper {
+  font-family: $font-Inter;
+  font-weight: $fw-extrabold;
+  color: $color-midnight-blue;
+}
+
+.link {
+  display: block;
+  margin-bottom: 12px;
+  font-size: 18px;
+  line-height: 22px;
+  cursor: pointer;
+
+  & .iconWrapper {
+    padding-left: 20px;
+    color: $color-french-grey;
+  }
+
+  &:hover {
+    color: $color-picton-blue;
+    text-decoration: underline;
+
+    & .iconWrapper {
+      color: $color-picton-blue;
+    }
+  }
+}
+
+.offered {
+  @include regularText;
+  color: $color-santas-grey;
+  margin-bottom: 12px;
+}
+
+.button {
+  min-width: 165px;
+  height: 41px;
+  white-space: nowrap;
+}
+.actionButton {
+  width: auto;
+  height: 42px;
+  padding: 12px 24px;
+  text-transform: uppercase;
+  border-radius: 8px;
+  justify-self: end;
+  font-weight: $fw-semibold;
+}
+.contentClassName {
+  padding: 35px 32px;
+}
+.searchBidsLink {
+  button[name='Bids'][class*='active'] {
+    color: $color-metallic-seaweed;
+    &:after {
+      background-color: $color-metallic-seaweed;
+    }
+  }
+}

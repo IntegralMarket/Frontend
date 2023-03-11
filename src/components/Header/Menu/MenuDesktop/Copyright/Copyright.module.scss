@@ -1,0 +1,12 @@
+@use 'styles/style.scss' as *;
+
+.root {
+  margin-bottom: 38px;
+}
+
+.text {
+  font-size: 13px;
+  line-height: 1.55;
+  font-weight: 400;
+  color: $color-grey-4f;
+}

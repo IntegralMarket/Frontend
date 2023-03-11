@@ -1,0 +1,194 @@
+@use 'styles/style.scss' as *;
+
+.tabsWrapper {
+  width: 100%;
+}
+
+.header {
+  display: flex;
+  align-items: flex-end;
+  position: relative;
+  // @include container;
+  max-width: 1216px;
+  margin: auto;
+  padding-right: 15px;
+  gap: 50px;
+
+  &::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    height: 1px;
+    max-width: 1276px;
+    width: 100%;
+    background-color: $color-french-grey-a30;
+  }
+
+  &.rounded {
+    gap: 20px;
+
+    &::after {
+      content: none;
+    }
+  }
+}
+
+.addon {
+  position: absolute;
+  right: 0;
+  bottom: 15px;
+  @include container;
+  width: fit-content;
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+}
+
+.tabsItem {
+  font-size: 16px;
+  width: 15%;
+  text-align: center;
+  padding: 1% 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.buttonLined {
+  position: relative;
+  min-width: 125px;
+  padding: 20px;
+  border: none;
+  font-size: 16px;
+  font-weight: 400;
+  font-family: $font-Pangram;
+  line-height: 19px;
+  color: $color-santas-grey;
+  background-color: transparent;
+  cursor: pointer;
+  transition: color 0.2s ease;
+
+  &::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    height: 2px;
+    width: 100%;
+    border-radius: 4px;
+    background-color: transparent;
+    transition: background-color 0.2s ease;
+  }
+
+  &.disabled {
+    color: $color-french-grey;
+    cursor: auto;
+  }
+
+  &.active {
+    font-weight: 700;
+    color: $color-midnight-blue;
+
+    &::after {
+      background-color: $color-midnight-blue;
+    }
+  }
+}
+
+.buttonRounded {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  max-width: 204px;
+  width: 100%;
+  height: 58px;
+  border: 2px solid transparent;
+  border-radius: 20px;
+  @include boldText;
+  color: $color-santas-grey;
+  background-color: transparent;
+  cursor: pointer;
+  transition: color 0.2s ease;
+
+  .iconShadow {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 38px;
+    height: 38px;
+    margin-right: 12px;
+    background-color: $color-grey-f358;
+    border-radius: 14px;
+
+    & > span {
+      font-size: 26px;
+      color: $color-santas-grey;
+    }
+  }
+
+  &.active,
+  &:hover {
+    border-color: $color-midnight-blue;
+    color: $color-midnight-blue;
+
+    & span {
+      color: $color-midnight-blue;
+    }
+  }
+}
+
+.buttonTagged {
+  @include regularText16;
+  color: $color-santas-grey;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+
+  width: fit-content;
+  padding: 9px 18px;
+  max-height: 37px;
+  border: none;
+  background: none;
+
+  cursor: pointer;
+  transition: color 0.2s ease;
+
+  &.active {
+    @include boldText16;
+    background-color: $color-grey-f358;
+    border-radius: 6px;
+    color: $color-midnight-blue;
+  }
+}
+
+.tagFontBlue {
+  &.active {
+    color: $color-midnight-blue;
+  }
+}
+
+.hidden {
+  display: none;
+}
+
+.tabPannelBox {
+  animation: aaa 0.5s ease-in-out forwards;
+}
+
+@keyframes aaa {
+  0% {
+    transform: translateY(10px);
+    opacity: 0;
+  }
+
+  30% {
+    opacity: 0;
+  }
+
+  100% {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}

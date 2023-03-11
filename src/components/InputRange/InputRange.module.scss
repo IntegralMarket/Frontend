@@ -1,0 +1,81 @@
+@use 'styles/style.scss' as *;
+
+.container {
+  display: flex;
+  flex-direction: column;
+  max-width: 318px;
+  width: 100%;
+  font-family: $font-Pangram;
+  border-radius: 8px;
+
+  & > span {
+    padding: 5px 0 0 15px;
+    font-size: 12px;
+    color: $color-red;
+  }
+}
+
+.inputWrapper {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  max-width: 318px;
+  width: 100%;
+  height: 48px;
+  padding: 6px;
+  border: 0.5px solid $color-grey-f358;
+  border-radius: 8px;
+  font-size: 12px;
+  font-weight: $fw-regular;
+  color: $color-grey-2ecf;
+
+  &:focus-visible,
+  &:focus {
+    outline: none;
+  }
+}
+
+.divider {
+  display: flex;
+  flex-shrink: 0;
+  align-items: center;
+  justify-content: center;
+  width: 32px;
+  height: 1px;
+  margin: 0 4px;
+  background-color: $color-grey-f358;
+}
+
+.input {
+  height: 100%;
+  width: 100%;
+  padding: 4px;
+  border: 0.5px solid transparent;
+  border-radius: 4px;
+  outline: none;
+  @include regularText;
+  color: #002366;
+
+  &::placeholder {
+    @include regularText;
+    color: $color-santas-grey;
+  }
+}
+
+.input::-webkit-outer-spin-button,
+.input::-webkit-inner-spin-button {
+  /* display: none; <- Crashes Chrome on hover */
+  -webkit-appearance: none;
+  margin: 0;
+  /* <-- Apparently some margin are still there even though it's hidden */
+}
+
+.input[type='number'] {
+  -moz-appearance: textfield;
+  /* Firefox */
+}
+
+.error {
+  border-color: $color-red !important;
+  color: $color-red;
+}

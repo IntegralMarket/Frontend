@@ -1,0 +1,110 @@
+@use 'styles/style.scss' as *;
+
+.content {
+  font-family: $font-Pangram;
+  color: $color-midnight-blue;
+}
+
+.wrapper {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  margin-bottom: 12px;
+}
+
+.image {
+  margin-right: 12px;
+}
+
+.name {
+  margin-right: 25px;
+  font-family: $font-Inter;
+  font-weight: $fw-extrabold;
+}
+
+.link:hover .name {
+  color: $color-picton-blue;
+  text-decoration: underline;
+}
+
+.description {
+  @include regularText;
+  color: $color-santas-grey;
+}
+
+.contentLarge {
+  display: flex;
+  align-items: center;
+  font-family: $font-Pangram;
+  color: $color-midnight-blue;
+
+  .wrapper {
+    justify-content: space-between;
+  }
+
+  .image {
+    margin-right: 20px;
+  }
+
+  .name {
+    margin-right: 0;
+    margin-bottom: 12px;
+    font-size: 36px;
+    line-height: 44px;
+  }
+}
+
+.contentSmall {
+  display: flex;
+  align-items: center;
+  color: $color-midnight-blue;
+  border-top: 1px solid $color-grey-f358;
+  padding-top: 12px;
+
+  .image {
+    margin-right: 10px;
+  }
+
+  .name {
+    //margin-bottom: 10px;
+    font-size: 13px;
+    font-weight: $fw-regular;
+    line-height: 16px;
+  }
+
+  span {
+    font-size: 13px;
+    line-height: 16px;
+    letter-spacing: 0.01em;
+    color: $color-french-grey;
+  }
+}
+
+.contentAuthor {
+  display: flex;
+  color: $color-midnight-blue;
+  border-top: 1px solid $color-grey-f358;
+  padding-top: 12px;
+  align-items: center;
+
+  .image {
+    margin-right: 10px;
+  }
+
+  span {
+    font-size: 13px;
+    line-height: 16px;
+    letter-spacing: 0.01em;
+    color: $color-french-grey;
+  }
+
+  .name {
+    font-size: 13px;
+    font-weight: $fw-regular;
+    line-height: 16px;
+  }
+}
+
+.titleLink {
+  color: $color-metallic-seaweed;
+}

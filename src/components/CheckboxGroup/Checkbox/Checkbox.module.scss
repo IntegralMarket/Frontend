@@ -1,0 +1,61 @@
+@use 'styles/style.scss' as *;
+
+.label {
+  display: flex;
+  align-items: center;
+  @include regularText;
+  line-height: $checkbox-size;
+  cursor: pointer;
+}
+
+.checkbox {
+  display: none;
+
+  & + span {
+    position: relative;
+    padding-left: calc($checkbox-size + 10px);
+
+    &::before {
+      font-family: $font-Inter;
+      content: ' ';
+      position: absolute;
+      top: 50%;
+      left: 0;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      width: $checkbox-size;
+      height: $checkbox-size;
+      background-color: $color-white;
+      border: 1px solid $color-santas-grey;
+      border-radius: 50%;
+      transform: translate(0, -50%);
+      transition: ease-in-out 0.3s;
+      transition-property: color, border-color, background-color;
+    }
+  }
+
+  &.primary:checked + span::before {
+    content: '✓';
+    color: $color-white;
+    border-color: $color-midnight-blue;
+    background-color: $color-midnight-blue;
+  }
+
+  &.secondary:checked + span::before {
+    content: '✓';
+    color: $color-white;
+    border-color: $color-metallic-seaweed;
+    background-color: $color-metallic-seaweed;
+  }
+}
+
+.checkboxGroup {
+  display: flex;
+  flex-direction: column;
+  gap: 46px;
+
+  &.row {
+    flex-direction: row;
+  }
+}

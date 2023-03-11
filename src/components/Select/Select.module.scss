@@ -1,0 +1,115 @@
+@use 'styles/style.scss' as *;
+
+.select {
+  min-width: 173px;
+  width: 100%;
+  height: 52px;
+  overflow: visible;
+  border: 1px solid $color-grey-f358;
+  input {
+    color: $color-midnight-blue !important;
+    font-weight: $fw-medium !important;
+  }
+  .control {
+    border: none;
+    border-radius: 8px;
+    height: 100%;
+    box-shadow: none;
+
+    &.disabled {
+      color: $color-midnight-blue !important;
+      background-color: rgba(239, 239, 239, 0.3) !important;
+    }
+
+    &.error {
+      border: 1px solid $color-red !important;
+    }
+  }
+
+  .valueContainer {
+    flex-wrap: nowrap;
+  }
+
+  .singleValue {
+    @include mediumText;
+    color: $color-midnight-blue;
+  }
+
+  .multiValue {
+    display: inline;
+    flex-shrink: 0;
+    margin: 0;
+    margin-right: 2px;
+    padding: 0;
+    @include regularText;
+    color: $color-midnight-blue;
+    background-color: transparent;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+
+    & > div::after {
+      content: ', ';
+    }
+
+    & > div[role='button'] {
+      display: none;
+    }
+  }
+
+  .placeholder {
+    @include regularText;
+    color: $color-french-grey;
+  }
+
+  .container {
+    & > span {
+      display: none;
+    }
+    svg {
+      width: 15px;
+    }
+  }
+
+  .arrow {
+    color: $color-grey-1b;
+
+    &.isOpen {
+      color: $color-midnight-blue;
+      transform: rotate(180deg);
+    }
+  }
+
+  .menuList {
+    padding: 16px 16px 18px 16px;
+    max-height: 200px;
+    overflow-y: auto;
+    &::-webkit-scrollbar {
+      width: 6px;
+      background-color: inherit;
+      border-radius: 9em;
+    }
+    &::-webkit-scrollbar-thumb {
+      background-color: $color-french-grey;
+      border-radius: 9em;
+    }
+  }
+
+  .option {
+    display: flex;
+    align-items: center;
+    min-height: 22px;
+    padding: 0;
+    @include regularText;
+    color: $color-santas-grey;
+    background-color: transparent;
+
+    &.isSelected {
+      color: $color-midnight-blue;
+    }
+
+    &:not(:last-child) {
+      margin-bottom: 12px;
+    }
+  }
+}

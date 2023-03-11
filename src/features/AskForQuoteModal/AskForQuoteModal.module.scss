@@ -1,0 +1,115 @@
+@use 'styles/style.scss' as *;
+
+.form {
+  width: 100%;
+  font-family: $font-Pangram;
+  font-size: 14px;
+  font-weight: $fw-bold;
+  color: $color-midnight-blue;
+}
+
+.title {
+  margin-bottom: 48px;
+  font-size: 20px;
+  line-height: 24px;
+  font-weight: $fw-bold;
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: repeat(3fr);
+  gap: 24px 0;
+}
+
+.flex {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+
+.label {
+  font-weight: $fw-regular;
+  color: $color-santas-grey;
+}
+
+.select {
+  min-width: 268px;
+  border-radius: 8px;
+  &:global(.CSS_select__placeholder) {
+    @include placeholder;
+  }
+  svg {
+    fill: $color-midnight-blue;
+    width: 17px;
+    height: 17px;
+  }
+}
+
+.input {
+  border: 1px solid #f3f5f8;
+  border-radius: 8px;
+  width: 268px;
+  font-weight: $fw-medium !important;
+  @include boldText;
+  color: $color-midnight-blue;
+
+  &::placeholder {
+    @include placeholder;
+  }
+
+  &.hidden {
+    display: none;
+  }
+}
+
+.longItem {
+  width: 556px;
+}
+
+.buttonBlock {
+  display: flex;
+  align-items: center;
+
+  button {
+    margin-right: 12px;
+  }
+}
+
+.calendar {
+  padding: 15px 10px;
+  display: flex;
+  align-items: center;
+  gap: 11px;
+  color: $color-midnight-blue;
+
+  .date {
+    font-weight: $fw-medium;
+    color: $color-midnight-blue;
+  }
+}
+
+.tradersInfo {
+  @include regularText;
+  color: $color-grey-1b;
+
+  .number {
+    color: $color-picton-blue;
+  }
+}
+
+.buttons {
+  button {
+    margin-right: 10px;
+  }
+  display: flex;
+}
+
+.border {
+  height: 1px;
+  margin: 6px 0;
+  background-color: $color-grey-f358;
+}
+
+.additionalField {
+  margin-bottom: -25px;
+}

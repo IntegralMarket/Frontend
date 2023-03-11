@@ -1,0 +1,107 @@
+@use 'styles/style.scss' as *;
+
+.tooltip {
+  position: relative;
+  min-height: 162px;
+  min-width: 344px;
+  padding: 24px !important;
+  background-color: $color-white;
+  z-index: 9999 !important;
+
+  &::after {
+    content: '';
+    position: absolute;
+    width: 14px;
+    height: 15px;
+    background-image: url("data:image/svg+xml,%3Csvg width='10' height='16' viewBox='0 0 10 16' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M1.5 10.5992C-0.500002 9.44446 -0.499999 6.55771 1.5 5.40301L9.36604 0.861549V15.1406L1.5 10.5992Z' fill='white'/%3E%3C/svg%3E%0A");
+    background-repeat: no-repeat;
+  }
+
+  &.right {
+    transform: translate(30px, -62%);
+
+    &::after {
+      top: calc(50% - 15px);
+      left: -8px;
+    }
+  }
+
+  &.bottom {
+    transform: translate(-80%, 0px);
+
+    &::after {
+      top: -9px;
+      left: 78%;
+      transform: rotate(90deg);
+    }
+  }
+}
+
+.content {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+
+.title {
+  font-family: $font-Inter;
+  font-size: 14px;
+  font-weight: $fw-extrabold;
+  line-height: 18px;
+  color: $color-midnight-blue;
+  margin-bottom: 10px;
+  &:hover {
+    color: $color-picton-blue;
+    text-decoration: underline;
+    cursor: pointer;
+  }
+}
+
+.subtitle {
+  @include regularText;
+  color: $color-midnight-blue;
+}
+
+.description {
+  @include regularText;
+  color: $color-santas-grey;
+  font-weight: $fw-regular;
+  p {
+    margin: 10px 0;
+  }
+}
+
+.period,
+.quantity {
+  font-weight: $fw-regular;
+  color: $color-midnight-blue;
+}
+
+.cross {
+  position: absolute;
+  top: 0px;
+  right: 0px;
+  width: 12px;
+  height: 12px;
+  padding: 0;
+  border: none;
+  background-color: transparent;
+  color: $color-midnight-blue;
+  cursor: pointer;
+}
+
+.buttonWrapper {
+  width: 100%;
+  display: flex;
+  justify-content: flex-end;
+}
+
+.button {
+  min-width: 134px;
+  height: 36px;
+  font-size: 12px;
+  line-height: 18px;
+  font-weight: $fw-bold;
+  text-transform: uppercase;
+  border-radius: 6px;
+}

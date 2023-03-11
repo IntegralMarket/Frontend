@@ -1,0 +1,105 @@
+@use 'styles/style.scss' as *;
+
+.filterBlock {
+  @include container;
+  width: 100%;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  align-items: flex-end;
+  justify-content: flex-start;
+  margin-bottom: 40px;
+}
+
+.toggle {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  @include regularText;
+}
+
+.navigation {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 12px;
+}
+
+.dropdown {
+  margin-right: 28px;
+}
+
+.radioGroup {
+  gap: 12px;
+  white-space: nowrap;
+
+  span {
+    color: $color-santas-grey;
+  }
+  input:checked + span {
+    color: $color-midnight-blue;
+  }
+}
+
+.cardGrid {
+  @include container;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 20px;
+}
+
+.plugText {
+  padding-top: 20px;
+  @include regularText;
+  color: $color-grey-1b;
+  text-align: center;
+}
+
+// Producer only
+
+.producerBlock {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 52px;
+}
+
+.faqCaption {
+  font-family: $font-Inter;
+  font-weight: $fw-extrabold;
+  color: $color-midnight-blue;
+  margin-bottom: 20px;
+}
+
+.faqList {
+  margin: 0;
+  padding-left: 26px;
+}
+
+.faqListItem {
+  list-style: decimal;
+
+  .link {
+    color: $color-picton-blue;
+
+    &:hover {
+      opacity: 0.7;
+    }
+  }
+}
+
+.showMoreButton {
+  margin: 20px auto 0;
+  border: none;
+  @include regularText;
+  color: $color-midnight-blue;
+  background-color: transparent;
+}
+.switch {
+  & input[type='checkbox'] {
+    &:checked + span {
+      background-color: $color-metallic-seaweed !important;
+      border-color: $color-metallic-seaweed !important;
+    }
+  }
+}

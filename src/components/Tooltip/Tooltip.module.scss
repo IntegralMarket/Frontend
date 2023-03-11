@@ -1,0 +1,13 @@
+@use 'styles/style.scss' as *;
+
+.portal {
+  font-family: $font-Pangram;
+
+  :global(.nextui-tooltip) {
+    background-color: inherit !important;
+  }
+
+  :global(.nextui-tooltip-arrow) {
+    background-color: inherit !important;
+  }
+}

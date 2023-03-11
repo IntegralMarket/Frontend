@@ -1,0 +1,34 @@
+@use 'styles/style.scss' as *;
+
+.button {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 38px;
+  height: 38px;
+  padding: 0;
+  border: none;
+  border-radius: 14px;
+  background-color: $color-grey-f358;
+  transition: background-color 0.2s ease;
+  cursor: pointer;
+
+  & > span {
+    font-size: 24px;
+    color: $color-french-grey;
+    transition: color 0.2s ease;
+  }
+
+  &:hover {
+    background-color: lighten($color-santas-grey, 20);
+  }
+
+  &:disabled {
+    pointer-events: none;
+  }
+}
+
+.tooltip {
+  color: $color-white !important;
+  background-color: $color-midnight-blue !important;
+}

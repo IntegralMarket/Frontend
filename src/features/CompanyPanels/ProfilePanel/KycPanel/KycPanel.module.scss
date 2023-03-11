@@ -1,0 +1,30 @@
+@use 'styles/style.scss' as *;
+
+.panelContainer {
+  width: 100%;
+  background-color: $color-grey-f358;
+}
+
+.panelContent {
+  @include container;
+  padding-top: 45px;
+  padding-bottom: 200px;
+}
+
+.documentItem {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  font-size: 14px;
+
+  .icon {
+    font-size: 28px;
+    color: $color-picton-blue;
+  }
+}
+
+.plugText {
+  @include regularText;
+  color: $color-grey-1b;
+  text-align: center;
+}

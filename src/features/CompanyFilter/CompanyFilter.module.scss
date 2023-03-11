@@ -1,0 +1,30 @@
+@use 'styles/style.scss' as *;
+
+.companyFilter {
+  max-width: 80%;
+  padding-top: 10px;
+  font-size: 14px;
+}
+
+.filterHeader {
+  color: $color-santas-grey;
+}
+
+.tagContainer {
+  padding-top: 20px;
+  margin-bottom: 40px;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+
+.filterLink {
+  color: $color-picton-blue;
+  text-decoration: underline;
+  cursor: pointer;
+
+  &:hover,
+  &.active {
+    color: $color-metallic-seaweed;
+  }
+}

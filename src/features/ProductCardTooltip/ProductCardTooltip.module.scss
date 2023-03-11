@@ -1,0 +1,43 @@
+@use 'styles/style.scss' as *;
+
+.tooltip {
+  min-height: 60px;
+  min-width: 200px;
+  padding: 12px 16px !important;
+
+  color: $color-white !important;
+  background-color: $color-midnight-blue !important;
+
+  &.right {
+    transform: translate(0px, -44%);
+
+    :global(.nextui-tooltip-arrow) {
+      transform: translate(-150%, -50%) rotate(135deg);
+    }
+  }
+
+  &.bottom {
+    transform: translate(-80%, 0px);
+
+    :global(.nextui-tooltip-arrow) {
+      transform: translate(530%, -150%) rotate(135deg);
+    }
+  }
+}
+
+.wrapper {
+  position: absolute;
+  top: 0;
+  right: 0;
+  transform: translate(12px, -12px);
+  cursor: pointer;
+}
+
+.description {
+  @include regularText;
+  color: $color-white;
+}
+
+.date {
+  color: $color-red;
+}

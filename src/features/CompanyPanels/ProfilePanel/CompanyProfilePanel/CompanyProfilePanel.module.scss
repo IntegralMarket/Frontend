@@ -1,0 +1,30 @@
+@use 'styles/style.scss' as *;
+
+.panelContainer {
+  width: 100%;
+  background-color: $color-grey-f358;
+}
+
+.panelContent {
+  @include container;
+  padding-top: 45px;
+  padding-bottom: 200px;
+}
+
+.tableCell {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+  font-family: $font-Pangram;
+
+  .caption {
+    font-size: 12px;
+    line-height: 14px;
+    color: $color-santas-grey;
+  }
+
+  .value {
+    @include regularText;
+    color: $color-grey-1b;
+  }
+}

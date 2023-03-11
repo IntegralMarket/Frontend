@@ -1,0 +1,71 @@
+@use 'styles/style.scss' as *;
+
+.modalContent {
+  padding: 0;
+  background-color: transparent;
+  width: 800px;
+  transform: translateY(140px);
+}
+
+.searchTop {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  color: $color-midnight-blue;
+  margin-bottom: 40px;
+
+  .text {
+    font-family: $font-Inter;
+    font-weight: 600;
+    font-size: 24px;
+  }
+
+  .cross {
+    cursor: pointer;
+  }
+}
+
+.searchBottom {
+  width: 100%;
+  background: $color-white;
+  height: 85px;
+  border-radius: 50px;
+  padding: 12px 30px;
+  display: flex;
+  align-items: center;
+}
+
+.searchImg {
+  margin-right: 25px;
+  cursor: pointer;
+}
+
+.searchSelect {
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  margin-right: 25px;
+  position: relative;
+
+  .arrow {
+    transform: rotate(90deg) translateX(2px);
+    margin-left: 5px;
+  }
+}
+
+.searchInput {
+  width: 100%;
+  height: 100%;
+  border: none;
+  border-radius: 0;
+  border-left: 1px solid $color-french-grey;
+  padding-left: 25px;
+  font-family: $font-Pangram;
+  font-size: 16px;
+  line-height: 19px;
+
+  &::placeholder {
+    color: $color-french-grey;
+  }
+}

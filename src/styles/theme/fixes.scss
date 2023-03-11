@@ -1,0 +1,17 @@
+.requestProductFormCross {
+  div[class*='_close_'] {
+    top: 24px;
+    span {
+      padding-right: 2px;
+    }
+  }
+}
+
+.requestDocumentModalCross {
+  div[class*='_close_'] {
+    span {
+      padding-top: 12px;
+      padding-right: 2px;
+    }
+  }
+}

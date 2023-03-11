@@ -1,0 +1,45 @@
+@use 'styles/style.scss' as *;
+
+.panelContainer {
+  width: 100%;
+  background-color: $color-grey-f358;
+}
+
+.panelContent {
+  display: flex;
+  column-gap: 38px;
+  @include container;
+  padding-top: 40px;
+  padding-bottom: 200px;
+}
+
+.accordionWrapper {
+  min-width: 268px;
+  max-width: 354px;
+  width: 100%;
+}
+
+.title {
+  padding-bottom: 62px;
+  color: $color-midnight-blue;
+}
+
+.accordion:not(:last-child) {
+  padding-bottom: 42px;
+}
+
+.content:not(:last-child) {
+  padding-bottom: 13px;
+}
+
+.amount {
+  color: $color-picton-blue;
+}
+
+.plugText {
+  @include regularText;
+}
+
+.map {
+  width: 100%;
+}

@@ -1,0 +1,30 @@
+@use 'styles/style.scss' as *;
+
+.circle {
+  min-width: 30px;
+  min-height: 30px;
+  max-width: 50px;
+  max-height: 50px;
+  border: 2px solid $color-midnight-blue;
+  border-radius: 50%;
+  background-color: rgb(0, 35, 102, 0.5);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  &.bids {
+    border: 2px solid $color-metallic-seaweed;
+    background-color: rgba(2, 128, 144, 0.5);
+  }
+
+  &.active {
+    border: 2px solid $color-butterfly-blue;
+    background-color: $color-blue-active-group;
+  }
+}
+
+.text {
+  color: $color-white;
+  font-weight: $fw-bold;
+  font-size: 14px;
+}

@@ -1,0 +1,17 @@
+@use 'styles/style.scss' as *;
+
+.mapWrapper {
+  position: relative;
+}
+.offerTable {
+  position: absolute;
+  top: 20px;
+  right: 20px;
+  z-index: 2;
+}
+.search{
+  position: absolute;
+  top: 24px;
+  left: 35px;
+  z-index: 1;
+}

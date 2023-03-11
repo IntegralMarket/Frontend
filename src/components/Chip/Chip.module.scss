@@ -1,0 +1,15 @@
+@use 'styles/style.scss' as *;
+
+.chip {
+  display: inline-flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  gap: 4px;
+  padding: 5px 10px;
+  border-radius: 8px;
+
+  @include regularText;
+  color: $color-picton-blue;
+  background: $color-grey-f358;
+}

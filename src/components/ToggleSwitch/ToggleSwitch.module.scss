@@ -1,0 +1,74 @@
+@use 'styles/style.scss' as *;
+
+$animation-time: 200ms;
+
+.toggleSwitch {
+  position: relative;
+  display: inline-block;
+  width: 36px;
+  height: 20px;
+
+  & input[type='checkbox'] {
+    display: none;
+
+    &:checked + .switch {
+      border-color: $color-midnight-blue;
+      background-color: $color-midnight-blue;
+
+      &::before {
+        animation: $animation-time forwards slideIn;
+        background-color: #fff;
+      }
+    }
+  }
+}
+
+.switch {
+  position: absolute;
+  width: 36px;
+  height: 20px;
+  border: 3px solid $color-french-grey;
+  background-color: $color-french-grey;
+  border-radius: 25px;
+  inset: 0;
+  cursor: pointer;
+  transition: background-color border-color;
+  transition-duration: $animation-time;
+  transition-timing-function: ease;
+
+  &::before {
+    position: absolute;
+    content: '';
+    inset: 0;
+    width: 14px;
+    height: 100%;
+    background-color: #fff;
+    border-radius: 7px;
+    will-change: transform;
+    animation: $animation-time forwards slideOut;
+  }
+}
+
+@keyframes slideIn {
+  0% {
+    transform: translateX(0px);
+  }
+  50% {
+    transform: translateX(0px);
+  }
+  100% {
+    transform: translateX(16px);
+  }
+}
+
+@keyframes slideOut {
+  0% {
+    transform: translateX(16px);
+  }
+  50% {
+    transform: translateX(0px);
+  }
+  100% {
+    transform: translateX(0px);
+  }
+}

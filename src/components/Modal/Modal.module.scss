@@ -1,0 +1,57 @@
+@use 'styles/style.scss' as *;
+
+.modal {
+  width: 100vw;
+  height: 100vh;
+  background-color: $color-black-a20;
+  position: fixed;
+  top: 0;
+  left: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transform: scale(0);
+  backdrop-filter: blur(8px);
+  z-index: 15000;
+
+  &.topAligned {
+    align-items: flex-start;
+  }
+}
+
+.active {
+  transform: scale(1);
+
+  @media (min-height: 445px) {
+    overflow-y: scroll;
+  }
+}
+
+.modalContent {
+  padding: 30px;
+  border-radius: 12px;
+  background-color: $color-white;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+}
+
+.close {
+  display: flex;
+  position: absolute;
+  top: 28px;
+  right: 30px;
+  cursor: pointer;
+}
+
+.icon {
+  color: $color-midnight-blue;
+  top: 14px;
+  right: 14px;
+  padding: 10px;
+  cursor: pointer;
+
+  & span::before {
+    color: #002366;
+  }
+}

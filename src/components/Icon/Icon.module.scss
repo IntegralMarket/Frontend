@@ -1,0 +1,122 @@
+@font-face {
+  font-family: 'icons';
+  src: url('fonts/icons.eot?qtyjsp');
+  src: url('fonts/icons.eot?qtyjsp#iefix') format('embedded-opentype'),
+    url('fonts/icons.ttf?qtyjsp') format('truetype'),
+    url('fonts/icons.woff?qtyjsp') format('woff'),
+    url('fonts/icons.svg?qtyjsp#icons') format('svg');
+  font-weight: normal;
+  font-style: normal;
+  font-display: block;
+}
+
+.icon {
+  display: inline-block;
+  /* use !important to prevent issues with browser extensions that change fonts */
+  font-family: 'icons' !important;
+  speak: never;
+  font-style: normal;
+  font-weight: normal;
+  font-variant: normal;
+  text-transform: none;
+
+  /* Better Font Rendering =========== */
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+
+  & > svg {
+    width: auto;
+    height: 100%;
+  }
+}
+
+.arrow-down:before {
+  content: '\e918';
+}
+.toggle-arrow:before {
+  content: '\e91a';
+}
+.warning:before {
+  content: '\ea08';
+}
+.search:before {
+  content: '\e90e';
+}
+.sort:before {
+  content: '\e915';
+}
+.menu:before {
+  content: '\e917';
+}
+.arrow-right:before {
+  content: '\e903';
+}
+.box-tick:before {
+  content: '\e906';
+}
+.delivery:before {
+  content: '\e90f';
+}
+.map:before {
+  content: '\e910';
+}
+.cross:before {
+  content: '\e902';
+}
+.network:before {
+  content: '\e907';
+}
+.squares:before {
+  content: '\e90d';
+}
+.info:before {
+  content: '\e900';
+}
+.email:before {
+  content: '\e901';
+}
+.calendar:before {
+  content: '\e904';
+}
+.commodities:before {
+  content: '\e905';
+}
+.doc:before {
+  content: '\e908';
+}
+.filter:before {
+  content: '\e909';
+}
+.geo:before {
+  content: '\e90a';
+}
+.hamburger:before {
+  content: '\e90b';
+}
+.i:before {
+  content: '\e90c';
+}
+.pdf:before {
+  content: '\e911';
+}
+.phone:before {
+  content: '\e912';
+}
+.profile:before {
+  content: '\e913';
+}
+.telegram:before {
+  content: '\e914';
+}
+.whatsapp:before {
+  content: '\e916';
+}
+.star-empty:before {
+  content: '\e9d7';
+}
+.star-half:before {
+  content: '\e9d8';
+}
+.star-full:before {
+  content: '\e9d9';
+}

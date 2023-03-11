@@ -1,0 +1,35 @@
+@use 'styles/style.scss' as *;
+
+.root {
+  position: absolute;
+  top: 5px;
+  right: 5px;
+  z-index: 99999;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 40px;
+  height: 40px;
+  cursor: pointer;
+}
+
+.wrapper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 24px;
+  height: 20px;
+}
+
+.button {
+  width: 22px;
+  height: 22px;
+  border: none;
+  background: url('/images/x-mark.svg') no-repeat;
+  background-size: 22px 22px;
+  cursor: pointer;
+
+  &:focus {
+    outline: none;
+  }
+}

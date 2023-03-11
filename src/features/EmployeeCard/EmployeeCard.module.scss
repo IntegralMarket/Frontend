@@ -1,0 +1,42 @@
+@use 'styles/style.scss' as *;
+
+.cardWrapper {
+  position: relative;
+  max-width: 171px;
+  width: 100%;
+  min-height: 214px;
+  background: $color-white;
+  box-shadow: 0px 15px 34px rgba(8, 15, 52, 0.06);
+  border-radius: 12px;
+  padding: 48px 18px 24px;
+}
+
+.title {
+  margin-bottom: 2px;
+  font-size: 10px;
+  line-height: 12px;
+  color: $color-santas-grey;
+}
+
+.content {
+  display: block;
+  width: 100%;
+  margin-bottom: 20px;
+  @include regularText;
+
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+}
+
+.avatar {
+  position: absolute;
+  left: 16px;
+  top: -20px;
+  width: 44px;
+  height: 44px;
+  border-radius: 22px;
+  overflow: hidden;
+  border: 2px solid $color-white;
+  background-color: $color-santas-grey;
+}

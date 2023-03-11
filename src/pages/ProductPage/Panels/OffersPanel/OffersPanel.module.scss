@@ -1,0 +1,28 @@
+@use 'styles/style.scss' as *;
+
+.panelContainer {
+  width: 100%;
+}
+
+.panelContent {
+  @include container;
+  padding-top: 30px;
+  padding-bottom: 200px;
+}
+
+.title {
+  font-size: 36px;
+  color: $color-midnight-blue;
+}
+
+.button {
+  width: 100%;
+}
+
+.showMoreButton {
+  margin: 20px auto 0;
+  border: none;
+  @include regularText;
+  color: $color-midnight-blue;
+  background-color: transparent;
+}

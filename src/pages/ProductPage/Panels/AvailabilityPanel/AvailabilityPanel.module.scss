@@ -1,0 +1,42 @@
+@use 'styles/style.scss' as *;
+
+.panelContainer {
+  width: 100%;
+  background-color: $color-grey-f358;
+}
+
+.panelContent {
+  @include container;
+  padding-top: 45px;
+  padding-bottom: 200px;
+}
+
+.documentTitle {
+  margin-bottom: 22px;
+  font-family: $font-Inter;
+  color: $color-midnight-blue;
+}
+
+.plugText {
+  @include regularText;
+  color: $color-grey-1b;
+  text-align: center;
+}
+
+.infoList {
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+  margin-bottom: 60px;
+  columns: 2;
+  column-gap: 30%;
+}
+
+.infoItem {
+  margin-bottom: 11px;
+
+  .label,
+  .value {
+    @include regularText;
+  }
+}

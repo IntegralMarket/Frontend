@@ -1,0 +1,48 @@
+@use 'styles/style.scss' as *;
+
+.table {
+  margin-bottom: 200px;
+}
+
+.grade {
+  font-family: $font-Inter;
+  font-weight: 800;
+  color: $color-midnight-blue;
+
+  &:hover {
+    color: $color-picton-blue;
+    text-decoration: underline;
+  }
+}
+
+.price {
+  white-space: nowrap;
+  span {
+    font-weight: 800;
+    color: $color-red;
+  }
+}
+
+.bid {
+  white-space: nowrap;
+  span {
+    font-weight: 800;
+    color: $color-metallic-seaweed;
+  }
+}
+
+.date {
+  &_critical {
+    color: $color-red;
+  }
+}
+
+.trader {
+  text-align: end;
+
+  &:hover {
+    color: $color-picton-blue;
+    text-decoration: underline;
+    cursor: pointer;
+  }
+}

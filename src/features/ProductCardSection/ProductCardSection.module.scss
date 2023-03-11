@@ -1,0 +1,101 @@
+@use 'styles/style.scss' as *;
+@use 'styles/theme/fixes.scss' as *;
+
+.filterBlock {
+  width: 100%;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  align-items: flex-end;
+  justify-content: space-between;
+  margin-bottom: 40px;
+}
+
+.toggle {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  @include regularText;
+}
+
+.navigation {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 12px;
+}
+
+.dropdown {
+  margin-right: 28px;
+}
+
+.rightButton {
+  display: flex;
+  justify-content: flex-end;
+  button {
+    min-width: 135px;
+    min-height: 42px;
+    justify-content: center;
+    font-weight: $fw-bold;
+    padding: 12px 24px;
+    white-space: nowrap;
+  }
+}
+
+.radioGroup {
+  gap: 12px;
+  white-space: nowrap;
+
+  span {
+    color: $color-santas-grey;
+  }
+  input:checked + span {
+    color: $color-midnight-blue;
+  }
+}
+
+.cardGrid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 20px;
+}
+
+.plugText {
+  padding-top: 20px;
+  @include regularText;
+  color: $color-grey-1b;
+  text-align: center;
+}
+
+// Producer only
+
+.producerBlock {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 52px;
+}
+
+.faqCaption {
+  font-family: $font-Inter;
+  font-weight: $fw-extrabold;
+  color: $color-midnight-blue;
+  margin-bottom: 20px;
+}
+
+.faqList {
+  margin: 0;
+  padding-left: 26px;
+}
+
+.faqListItem {
+  list-style: decimal;
+
+  .link {
+    color: $color-picton-blue;
+
+    &:hover {
+      opacity: 0.7;
+    }
+  }
+}

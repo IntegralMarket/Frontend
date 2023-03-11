@@ -1,0 +1,80 @@
+@use 'styles/style.scss' as *;
+
+.footer {
+  position: relative;
+  display: flex;
+  height: 504px;
+  background-color: $color-grey-f358;
+  font-family: $font-Pangram;
+}
+
+.container {
+  display: flex;
+  @include container;
+}
+
+.left {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  max-width: 252px;
+  width: 100%;
+  height: 100%;
+  padding: 62px 0 32px;
+  color: $color-white;
+
+  & > div,
+  & > p {
+    position: relative;
+    z-index: 1;
+  }
+  & > div:first-child {
+    margin-bottom: auto;
+  }
+
+  &::before {
+    position: absolute;
+    z-index: 0;
+    top: 0;
+    right: 0;
+    content: '';
+    background-color: $color-midnight-blue;
+    width: 100vw;
+    height: 100%;
+  }
+
+  &.red::before {
+    background-color: $color-red;
+  }
+  &.lazur::before {
+    background-color: $color-metallic-seaweed;
+  }
+}
+
+.logo {
+  margin-bottom: 30px;
+  width: 163px;
+  height: 47px;
+  background: url('/images/logo-footer.svg');
+}
+
+.text {
+  font-size: 14px;
+  line-height: 20px;
+}
+
+.right {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  width: 100%;
+  padding: 62px 62px 32px;
+  color: $color-grey-1b;
+}
+
+.wrapper {
+  display: flex;
+  justify-content: flex-start;
+  gap: 200px;
+}

@@ -1,0 +1,187 @@
+@use 'styles/style.scss' as *;
+
+.wrapper {
+  padding-top: 5px;
+}
+
+.form {
+  width: 100%;
+  font-family: $font-Pangram;
+  font-size: 14px;
+  font-weight: $fw-bold;
+  color: $color-midnight-blue;
+}
+
+.title {
+  margin-bottom: 25px;
+  font-weight: $fw-bold;
+  font-family: $font-Inter;
+  font-size: 18px;
+  line-height: 22px;
+  color: $color-midnight-blue;
+}
+
+.flex {
+  width: 890px;
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+
+.flexColumn {
+  height: 395px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.label {
+  font-weight: $fw-regular;
+  color: $color-santas-grey;
+  margin-bottom: 5px;
+}
+
+.select {
+  min-width: 268px;
+  min-height: 52px;
+  border-radius: 8px;
+  border: 1px solid $color-grey-f358;
+
+  &:global(.CSS_select__placeholder) {
+    @include placeholder;
+  }
+  [class*='-singleValue'] {
+    font-weight: $fw-medium;
+  }
+  [class*='-indicatorContainer'] {
+    padding: 15px 18px;
+    svg {
+      fill: $color-midnight-blue;
+      width: 17px;
+      height: 17px;
+    }
+  }
+  [class*='-ValueContainer'] {
+    padding: 0 12px 0;
+  }
+}
+
+.inputRange > div {
+  width: 268px;
+  border: 1px solid $color-grey-f358;
+
+  & input::placeholder {
+    @include placeholder;
+  }
+  div {
+    transform: rotate(90deg);
+  }
+}
+
+.input {
+  width: 268px;
+  min-height: 52px;
+  padding: 12px 15px;
+  border: 1px solid $color-grey-f358;
+  font-weight: $fw-medium !important;
+
+  @include boldText;
+  color: $color-midnight-blue;
+
+  &::placeholder {
+    @include placeholder;
+    color: $color-french-grey;
+    font-size: 14px;
+  }
+
+  &.hidden {
+    display: none;
+  }
+}
+
+.nameLabel {
+  display: inline-block;
+  margin-bottom: 4px;
+  font-family: $font-Pangram;
+  font-weight: $fw-regular;
+  font-size: 14px;
+  line-height: 17px;
+  letter-spacing: 0.01em;
+  color: $color-santas-grey;
+}
+
+.name {
+  width: 268px;
+  height: 52px;
+  padding: 18px 16px;
+  font-family: $font-Pangram;
+  font-weight: $fw-regular;
+  font-size: 14px;
+  line-height: 17px;
+  letter-spacing: 0.01em;
+  color: $color-french-grey;
+  border: 1px solid $color-grey-f358;
+  border-radius: 8px;
+}
+
+.calendar {
+  display: flex;
+  align-items: center;
+  color: $color-midnight-blue;
+  margin-left: 15px;
+
+  .date {
+    margin-left: 8px;
+    font-weight: $fw-medium;
+  }
+}
+
+.tradersInfo {
+  @include regularText;
+  color: $color-grey-1b;
+  margin-left: 14px;
+  margin-bottom: 7px;
+  .number {
+    color: $color-picton-blue;
+  }
+}
+.uploadDocsIcon {
+  display: flex;
+  margin-top: -5px;
+}
+
+.button {
+  width: 87px;
+  height: 41px;
+  padding: 12px 24px;
+  border-radius: 4px;
+  text-transform: uppercase;
+  margin-right: 12px;
+  &:hover {
+    background-color: none;
+  }
+  &:active {
+    background: $color-white;
+    color: $color-metallic-seaweed;
+    border: 1px solid $color-metallic-seaweed;
+  }
+}
+
+.buttonBlock {
+  display: flex;
+  align-items: flex-end;
+  margin-bottom: 6px;
+  font-size: 14px;
+}
+
+.longItem {
+  width: 556px;
+}
+
+.error {
+  color: $color-red;
+}
+
+.addition {
+  margin-top: 25px;
+}

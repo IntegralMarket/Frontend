@@ -1,0 +1,29 @@
+@use 'styles/style.scss' as *;
+
+.wrapper {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background-color: $color-white;
+  padding: 18px;
+  box-shadow: 0 10px 24px rgba(8, 15, 52, 0.06);
+  border-radius: 12px;
+}
+
+.tooltip {
+  background-color: $color-midnight-blue !important;
+  color: $color-white !important;
+}
+
+.disabled {
+  background-color: $color-french-grey !important;
+}
+
+.iconWrapper {
+  cursor: pointer;
+  margin-top: 4px;
+  & > svg {
+    width: 20px;
+    height: 20px;
+  }
+}
